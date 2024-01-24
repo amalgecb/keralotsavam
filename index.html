@@ -36,7 +36,7 @@
                   var subamnt = document.getElementById("subamnt").value ;
             var durat = document.getElementById("duration").value;
           var prizd_amnt = parseInt(document.getElementById("remtdur").value);
-          var inst_remt = document.getElementById("remtamnt").value;
+          var inst_remt = parseInt(document.getElementById("remtamnt").value);
           var month_rem = (durat-inst_remt-1);
          var fut_liab= month_rem*subamnt;
           var net_prizedamnt = prizd_amnt-(subamnt*durat*0.009)-236;
