@@ -23,14 +23,16 @@
    <input type='text' style='display:none;' name='returnURL' value='null' > </input>
        <!-- Do not remove this code. -->
   <style>
-  html,body{
+ html, body {
     font-family: Arial, sans-serif;
-            background-image: url('mercedes-car.jpg');
-            background-size: cover;
-            background-position: cover;
-            margin: 0;
-            padding: 0;
-  }
+    background-image: url('mercedes-car.jpg');
+    background-size: cover;         /* Ensures the image covers the entire background */
+    background-position: center;    /* Centers the image */
+    background-repeat: no-repeat;   /* Prevents the image from repeating */
+    margin: 0;
+    padding: 0;
+    height: 100%;                   /* Ensures the body takes up the full height of the viewport */
+}
   #crmWebToEntityForm.zcwf_lblLeft {
       width:100%;
       padding: 25px;
