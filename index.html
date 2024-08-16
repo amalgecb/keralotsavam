@@ -2,121 +2,721 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-    <title>RETURNS CALC</title>
+    <title>Custom Zoho CRM Webform</title>
 </head>
-  <h4 class="w3-container w3-center w3-blue">RETURNS CALCULATOR</h4>
-<body>
-    
-  <table>
-    <tr>
-  <td>Enter subscription amount:</td>
-    
-  <td><input type ="number" id="subamnt"></td>
-  </tr>
-   <tr><td>Enter duration: </td>
-  <td><input type ="number" id="duration"></td></tr>
-   <tr><td>Enter prized amount: </td>
-  <td><input type ="number" id="remtdur"></td></tr>
-   <tr><td>Enter installment in which prized: </td>
-  <td><input type ="number" id="remtamnt"><div id="radio"></div></td></tr>
-    
-  
-  </table>
-  
-    
-   <div class="w3-center"><button type="button" id="myButton" class="w3-btn w3-green ">Click</button></div><br>
-  
 
-  <div id = "sruthi" class="w3-center w3-green " style="font-size: 30px;"></div>
-    <script>
-                  var subamnt = parseInt(document.getElementById("subamnt").value) ;
-            var durat = parseInt(document.getElementById("duration").value);
-          var prizd_amnt = parseInt(document.getElementById("remtdur").value);
-          var inst_remt = parseInt(document.getElementById("remtamnt").value);
-          var month_rem = (durat-inst_remt-1);
-         var fut_liab= month_rem*subamnt;
-          var net_prizedamnt = prizd_amnt-(subamnt*durat*0.009)-236;
-          
-          var csdt_intp=8.5;
-          var nfd_intp=7.1;
-          var std_two = 3.25;
-          var std_three= 4.25;
-          var std_six =4.75;
-          var std_oneyr= 5.5;
-      document.getElementById("remtamnt").oninput=function(){
-        if(this.value>month_rem) {
-          document.getElementById("radio").innerHTML="<input type='radio' value='1'>Option 1"
-        }
+<!-- Note :
+   - You can modify the font style and form style to suit your website. 
+   - Code lines with comments Do not remove this code are required for the form to work properly, make sure that you do not remove these lines of code. 
+   - The Mandatory check script can modified as to suit your business needs. 
+   - It is important that you test the modified form before going live.-->
+   <div id='crmWebToEntityForm' class='zcwf_lblLeft crmWebToEntityForm' style=' background: rgba(255, 255, 255, 0.7);max-width: 800px;'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+     <META HTTP-EQUIV ='content-type' CONTENT='text/html;charset=UTF-8'>
+     
+  <form id='webform456473000051337275' action='https://crm.zoho.in/crm/WebToLeadForm' name=WebToLeads456473000051337275 method='POST' onSubmit='javascript:document.charset="UTF-8"; return checkMandatory456473000051337275()' accept-charset='UTF-8'>
+   <input type='text' style='display:none;' name='xnQsjsdp' value='5474f486ca6e2ff48f4eeaca7969d74181587fbc323d933bd8e7b6a0c2ee6820'></input> 
+   <input type='hidden' name='zc_gad' id='zc_gad' value=''></input>
+   <input type='text' style='display:none;' name='xmIwtLD' value='8105f21e44325b06ddd28e0045571903bb2775fc7a2641318ea808630b3d3b72f7838f89290b478b3bc8c58bee126d6c'></input> 
+   <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
+   <input type='text' style='display:none;' name='returnURL' value='null' > </input>
+       <!-- Do not remove this code. -->
+  <style>
+  html,body{
+    font-family: Arial, sans-serif;
+            background-image: url('mercedes-car.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+  }
+  #crmWebToEntityForm.zcwf_lblLeft {
+      width:100%;
+      padding: 25px;
+      margin: 0 auto;
+      box-sizing: border-box;
+  }
+  #crmWebToEntityForm.zcwf_lblLeft * {
+      box-sizing: border-box;
+  }
+  #crmWebToEntityForm{text-align: left;}
+  #crmWebToEntityForm * {
+      direction: ltr;
+  }
+  .zcwf_lblLeft .zcwf_title {
+      word-wrap: break-word;
+      padding: 0px 6px 10px;
+      font-weight:bold }.zcwf_lblLeft.cpT_primaryBtn:hover{
+        background: rgba(255, 255, 255, 0.7) no-repeat padding-box !important;
+      border: 0 !important;
+      color: #fff !important;
+      outline: 0 !important;
+  }.zcwf_lblLeft .zcwf_col_fld input[type=text], input[type=password], .zcwf_lblLeft .zcwf_col_fld textarea {
+      width: 60%;
+      border: 1px solid #c0c6cc !important;
+      resize: vertical;
+      border-radius: 2px;
+      float: left;
+  }
+  .zcwf_lblLeft .zcwf_col_lab {
+      width: 30%;
+      word-break: break-word;
+      padding: 0px 6px 0px;
+      margin-right: 10px;
+      margin-top: 5px;
+      float: left;
+      min-height: 1px;
+  }
+  .zcwf_lblLeft .zcwf_col_fld {
+      float: left;
+      width: 68%;
+      padding: 0px 6px 0px;
+      position: relative;
+      margin-top: 5px;
+  }
+  .zcwf_lblLeft .zcwf_privacy{padding: 6px;}
+  .zcwf_lblLeft .wfrm_fld_dpNn{display: none;}
+  .dIB{display: inline-block;}
+  .zcwf_lblLeft .zcwf_col_fld_slt {
+      width: 60%;
+      border: 1px solid #ccc;
+      background: #fff;
+      border-radius: 4px;
+      font-size: 15px;
+      float: left;
+      resize: vertical;
+      padding: 2px 5px;
+  }
+  .zcwf_lblLeft .zcwf_row:after, .zcwf_lblLeft .zcwf_col_fld:after {
+      content: '';
+      display: table;
+      clear: both;
+  }
+  .zcwf_lblLeft .zcwf_col_help {
+      float: left;
+      margin-left: 7px;
+      font-size: 15px;
+      max-width: 35%;
+      word-break: break-word;
+  }
+  .zcwf_lblLeft .zcwf_help_icon {
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      background: #fff;
+      border: 1px solid #c0c6cc;
+      color: #c1c1c1;
+      text-align: center;
+      font-size: 11px;
+      line-height: 16px;
+      font-weight: bold;
+      border-radius: 50%;
+  }
+  .zcwf_lblLeft .zcwf_row {margin: 15px 0px;}
+  .zcwf_lblLeft .formsubmit {
+      margin-right: 5px;
+      cursor: pointer;
+      color: var(--baseColor);
+      font-size: 15px;
+  }
+  .zcwf_lblLeft .zcwf_privacy_txt {
+      width: 90%;
+      color: rgb(0, 0, 0);
+      font-size: 15px;
+      font-family: Verdana;
+      display: inline-block;
+      vertical-align: top;
+      color: var(--baseColor);
+      padding-top: 2px;
+      margin-left: 6px;
+  }
+  .zcwf_lblLeft .zcwf_button {
+      font-size: 15px;
+      color: var(--baseColor);
+      border: 1px solid #c0c6cc;
+      padding: 3px 9px;
+      border-radius: 4px;
+      cursor: pointer;
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+  }
+  .zcwf_lblLeft .zcwf_tooltip_over{
+      position: relative;
+  }
+  .zcwf_lblLeft .zcwf_tooltip_ctn{
+      position: absolute;
+      background: #dedede;
+      padding: 3px 6px;
+      top: 3px;
+      border-radius: 4px;word-break: break-word;
+      min-width: 100px;
+      max-width: 150px;
+      color: var(--baseColor);
+      z-index: 100;
+  }
+  .zcwf_lblLeft .zcwf_ckbox{
+      float: left;
+  }
+  .zcwf_lblLeft .zcwf_file{
+      width: 55%;
+      box-sizing: border-box;
+      float: left;
+  }
+  .clearB:after{
+      content:'';
+      display: block;
+      clear: both;
+  }
+  @media all and (max-width: 800px) {
+      .zcwf_lblLeft .zcwf_col_lab, .zcwf_lblLeft .zcwf_col_fld {
+          width: auto;
+          float: none !important;
       }
-      
-        document.getElementById("myButton").onclick = function(){
-          
-
-               
-         if(fut_liab>prizd_amnt) {
-           let csdt_amount= parseInt(prizd_amnt*((csdt_intp/1200)*month_rem));
-           document.getElementById("sruthi").innerHTML= csdt_amount+prizd_amnt;
-           
-         } else{
-          
-          if (month_rem>=12){ 
-            
-            let csdt_amount= parseInt(fut_liab*((csdt_intp/1200)*month_rem));
-            let nfd_amount = parseInt((net_prizedamnt-fut_liab)*(nfd_intp/1200)*month_rem);
-            let total_przmon=csdt_amount+nfd_amount+prizd_amnt;
-            
-            
-          document.getElementById("sruthi").innerHTML= total_przmon;
-        }
-           else if(month_rem<=1){ 
-        
-          let amount_ret= parseInt(net_prizedamnt*((nfd_intp/1200)*12))
-          let total_przmon = net_prizedamnt+amount_ret;
-          
-          document.getElementById("sruthi").innerHTML= "Since your termination date is in less than a month after prize money due, you will get returns only if you deposit for a year. The return is " +" "+ total_przmon;
-        }
-        
-      else if(month_rem<=2)
-        { 
-          let csdt_amount= parseInt(fut_liab*((std_two/1200)*month_rem));
-            let nfd_amount = parseInt((net_prizedamnt-fut_liab)*(std_two/1200)*month_rem);
-            let total_przmon=csdt_amount+nfd_amount+prizd_amnt;
-            
-            
-          document.getElementById("sruthi").innerHTML= total_przmon;
-          
-            
-            }else if (month_rem<=3){
-              let csdt_amount= parseInt(fut_liab*((std_three/1200)*month_rem));
-            let nfd_amount = parseInt((net_prizedamnt-fut_liab)*(std_three/1200)*month_rem);
-            let total_przmon=csdt_amount+nfd_amount+prizd_amnt;
-            
-            
-          document.getElementById("sruthi").innerHTML= total_przmon;
-            }else if(month_rem<=6){
-          
-               let csdt_amount= parseInt(fut_liab*((std_six/1200)*month_rem));
-            let nfd_amount = parseInt((net_prizedamnt-fut_liab)*(std_six/1200)*month_rem);
-            let total_przmon=csdt_amount+nfd_amount+prizd_amnt;
-            
-            
-          document.getElementById("sruthi").innerHTML= total_przmon;
-            }else{
-               let csdt_amount= parseInt(fut_liab*((std_oneyr/1200)*month_rem));
-            let nfd_amount = parseInt((net_prizedamnt-fut_liab)*(std_oneyr/1200)*month_rem);
-            let total_przmon=csdt_amount+nfd_amount+prizd_amnt;
-            
-            
-          document.getElementById("sruthi").innerHTML= total_przmon;
-            }
-         }
+      .zcwf_lblLeft .zcwf_col_help {width: 40%;}
+  }
+  </style>
+  <div class='zcwf_title' >Come on Kerala-benz</div><div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:15px; font-family: Verdana;'><label for='Last_Name'>Name<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Last_Name' name='Last Name' maxlength='80'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:15px; font-family: Verdana;'><label for='LEADCF36'>Country code</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='LEADCF36' name='LEADCF36'  >
+              <option value='-None-'>-None-</option>
+              <option value='&#x2b;91'>&#x2b;91</option>
+              <option value='&#x2b;971'>&#x2b;971</option>
+              <option value='&#x2b;93'>&#x2b;93</option>
+              <option value='&#x2b;355'>&#x2b;355</option>
+              <option value='&#x2b;213'>&#x2b;213</option>
+              <option value='&#x2b;1684'>&#x2b;1684</option>
+              <option value='&#x2b;376'>&#x2b;376</option>
+              <option value='&#x2b;244'>&#x2b;244</option>
+              <option value='&#x2b;1264'>&#x2b;1264</option>
+              <option value='&#x2b;672'>&#x2b;672</option>
+              <option value='&#x2b;64'>&#x2b;64</option>
+              <option value='&#x2b;1268'>&#x2b;1268</option>
+              <option value='&#x2b;54'>&#x2b;54</option>
+              <option value='&#x2b;374'>&#x2b;374</option>
+              <option value='&#x2b;297'>&#x2b;297</option>
+              <option value='&#x2b;247'>&#x2b;247</option>
+              <option value='&#x2b;61'>&#x2b;61</option>
+              <option value='&#x2b;43'>&#x2b;43</option>
+              <option value='&#x2b;994'>&#x2b;994</option>
+              <option value='1&#x20;242'>1 242</option>
+              <option value='&#x2b;973'>&#x2b;973</option>
+              <option value='&#x2b;880'>&#x2b;880</option>
+              <option value='&#x2b;1246'>&#x2b;1246</option>
+              <option value='&#x2b;375'>&#x2b;375</option>
+              <option value='&#x2b;32'>&#x2b;32</option>
+              <option value='&#x2b;501'>&#x2b;501</option>
+              <option value='&#x2b;229'>&#x2b;229</option>
+              <option value='&#x2b;1441'>&#x2b;1441</option>
+              <option value='&#x2b;975'>&#x2b;975</option>
+              <option value='&#x2b;591'>&#x2b;591</option>
+              <option value='&#x2b;387'>&#x2b;387</option>
+              <option value='&#x2b;55'>&#x2b;55</option>
+              <option value='&#x2b;267'>&#x2b;267</option>
+              <option value='&#x2b;1284'>&#x2b;1284</option>
+              <option value='&#x2b;673'>&#x2b;673</option>
+              <option value='&#x2b;359'>&#x2b;359</option>
+              <option value='&#x2b;226'>&#x2b;226</option>
+              <option value='&#x2b;95'>&#x2b;95</option>
+              <option value='&#x2b;257'>&#x2b;257</option>
+              <option value='&#x2b;855'>&#x2b;855</option>
+              <option value='&#x2b;237'>&#x2b;237</option>
+              <option value='&#x2b;1'>&#x2b;1</option>
+              <option value='&#x2b;238'>&#x2b;238</option>
+              <option value='1&#x20;345'>1 345</option>
+              <option value='&#x2b;236'>&#x2b;236</option>
+              <option value='&#x2b;235'>&#x2b;235</option>
+              <option value='&#x2b;56'>&#x2b;56</option>
+              <option value='&#x2b;86'>&#x2b;86</option>
+              <option value='&#x2b;57'>&#x2b;57</option>
+              <option value='&#x2b;269'>&#x2b;269</option>
+              <option value='&#x2b;242'>&#x2b;242</option>
+              <option value='&#x2b;682'>&#x2b;682</option>
+              <option value='&#x2b;506'>&#x2b;506</option>
+              <option value='&#x2b;385'>&#x2b;385</option>
+              <option value='&#x2b;53'>&#x2b;53</option>
+              <option value='&#x2b;357'>&#x2b;357</option>
+              <option value='&#x2b;420'>&#x2b;420</option>
+              <option value='&#x2b;243'>&#x2b;243</option>
+              <option value='&#x2b;45'>&#x2b;45</option>
+              <option value='&#x2b;246'>&#x2b;246</option>
+              <option value='&#x2b;253'>&#x2b;253</option>
+              <option value='&#x2b;1767'>&#x2b;1767</option>
+              <option value='&#x2b;1809'>&#x2b;1809</option>
+              <option value='&#x2b;1829'>&#x2b;1829</option>
+              <option value='&#x2b;1849'>&#x2b;1849</option>
+              <option value='&#x2b;593'>&#x2b;593</option>
+              <option value='&#x2b;20'>&#x2b;20</option>
+              <option value='&#x2b;503'>&#x2b;503</option>
+              <option value='&#x2b;240'>&#x2b;240</option>
+              <option value='&#x2b;291'>&#x2b;291</option>
+              <option value='&#x2b;372'>&#x2b;372</option>
+              <option value='&#x2b;251'>&#x2b;251</option>
+              <option value='&#x2b;500'>&#x2b;500</option>
+              <option value='&#x2b;298'>&#x2b;298</option>
+              <option value='&#x2b;679'>&#x2b;679</option>
+              <option value='&#x2b;358'>&#x2b;358</option>
+              <option value='&#x2b;33'>&#x2b;33</option>
+              <option value='&#x2b;594'>&#x2b;594</option>
+              <option value='&#x2b;689'>&#x2b;689</option>
+              <option value='&#x2b;241'>&#x2b;241</option>
+              <option value='&#x2b;220'>&#x2b;220</option>
+              <option value='&#x2b;995'>&#x2b;995</option>
+              <option value='&#x2b;49'>&#x2b;49</option>
+              <option value='&#x2b;233'>&#x2b;233</option>
+              <option value='&#x2b;350'>&#x2b;350</option>
+              <option value='&#x2b;30'>&#x2b;30</option>
+              <option value='&#x2b;299'>&#x2b;299</option>
+              <option value='&#x2b;1473'>&#x2b;1473</option>
+              <option value='&#x2b;590'>&#x2b;590</option>
+              <option value='&#x2b;1671'>&#x2b;1671</option>
+              <option value='&#x2b;502'>&#x2b;502</option>
+              <option value='&#x2b;224'>&#x2b;224</option>
+              <option value='&#x2b;245'>&#x2b;245</option>
+              <option value='&#x2b;592'>&#x2b;592</option>
+              <option value='&#x2b;509'>&#x2b;509</option>
+              <option value='&#x2b;39'>&#x2b;39</option>
+              <option value='&#x2b;504'>&#x2b;504</option>
+              <option value='&#x2b;852'>&#x2b;852</option>
+              <option value='&#x2b;36'>&#x2b;36</option>
+              <option value='&#x2b;354'>&#x2b;354</option>
+              <option value='&#x2b;62'>&#x2b;62</option>
+              <option value='&#x2b;98'>&#x2b;98</option>
+              <option value='&#x2b;964'>&#x2b;964</option>
+              <option value='&#x2b;353'>&#x2b;353</option>
+              <option value='&#x2b;44'>&#x2b;44</option>
+              <option value='&#x2b;972'>&#x2b;972</option>
+              <option value='&#x2b;225'>&#x2b;225</option>
+              <option value='1&#x20;876'>1 876</option>
+              <option value='&#x2b;81'>&#x2b;81</option>
+              <option value='&#x2b;962'>&#x2b;962</option>
+              <option value='&#x2b;7'>&#x2b;7</option>
+              <option value='&#x2b;254'>&#x2b;254</option>
+              <option value='&#x2b;686'>&#x2b;686</option>
+              <option value='&#x2b;965'>&#x2b;965</option>
+              <option value='&#x2b;996'>&#x2b;996</option>
+              <option value='&#x2b;856'>&#x2b;856</option>
+              <option value='&#x2b;371'>&#x2b;371</option>
+              <option value='&#x2b;961'>&#x2b;961</option>
+              <option value='&#x2b;266'>&#x2b;266</option>
+              <option value='&#x2b;231'>&#x2b;231</option>
+              <option value='&#x2b;218'>&#x2b;218</option>
+              <option value='&#x2b;423'>&#x2b;423</option>
+              <option value='&#x2b;370'>&#x2b;370</option>
+              <option value='&#x2b;352'>&#x2b;352</option>
+              <option value='&#x2b;853'>&#x2b;853</option>
+              <option value='&#x2b;389'>&#x2b;389</option>
+              <option value='&#x2b;261'>&#x2b;261</option>
+              <option value='&#x2b;265'>&#x2b;265</option>
+              <option value='&#x2b;60'>&#x2b;60</option>
+              <option value='&#x2b;960'>&#x2b;960</option>
+              <option value='&#x2b;223'>&#x2b;223</option>
+              <option value='&#x2b;356'>&#x2b;356</option>
+              <option value='&#x2b;692'>&#x2b;692</option>
+              <option value='&#x2b;596'>&#x2b;596</option>
+              <option value='&#x2b;222'>&#x2b;222</option>
+              <option value='&#x2b;230'>&#x2b;230</option>
+              <option value='&#x2b;262'>&#x2b;262</option>
+              <option value='&#x2b;52'>&#x2b;52</option>
+              <option value='&#x2b;691'>&#x2b;691</option>
+              <option value='&#x2b;373'>&#x2b;373</option>
+              <option value='&#x2b;377'>&#x2b;377</option>
+              <option value='&#x2b;976'>&#x2b;976</option>
+              <option value='&#x2b;382'>&#x2b;382</option>
+              <option value='1&#x20;664'>1 664</option>
+              <option value='&#x2b;212'>&#x2b;212</option>
+              <option value='&#x2b;258'>&#x2b;258</option>
+              <option value='&#x2b;264'>&#x2b;264</option>
+              <option value='&#x2b;674'>&#x2b;674</option>
+              <option value='&#x2b;977'>&#x2b;977</option>
+              <option value='&#x2b;31'>&#x2b;31</option>
+              <option value='&#x2b;599'>&#x2b;599</option>
+              <option value='&#x2b;687'>&#x2b;687</option>
+              <option value='&#x2b;505'>&#x2b;505</option>
+              <option value='&#x2b;227'>&#x2b;227</option>
+              <option value='&#x2b;234'>&#x2b;234</option>
+              <option value='&#x2b;683'>&#x2b;683</option>
+              <option value='&#x2b;850'>&#x2b;850</option>
+              <option value='1&#x20;670'>1 670</option>
+              <option value='&#x2b;47'>&#x2b;47</option>
+              <option value='&#x2b;968'>&#x2b;968</option>
+              <option value='&#x2b;92'>&#x2b;92</option>
+              <option value='&#x2b;680'>&#x2b;680</option>
+              <option value='&#x2b;970'>&#x2b;970</option>
+              <option value='&#x2b;507'>&#x2b;507</option>
+              <option value='&#x2b;675'>&#x2b;675</option>
+              <option value='&#x2b;595'>&#x2b;595</option>
+              <option value='&#x2b;51'>&#x2b;51</option>
+              <option value='&#x2b;63'>&#x2b;63</option>
+              <option value='&#x2b;870'>&#x2b;870</option>
+              <option value='&#x2b;48'>&#x2b;48</option>
+              <option value='&#x2b;351'>&#x2b;351</option>
+              <option value='&#x2b;1787'>&#x2b;1787</option>
+              <option value='&#x2b;1939'>&#x2b;1939</option>
+              <option value='&#x2b;974'>&#x2b;974</option>
+              <option value='&#x2b;40'>&#x2b;40</option>
+              <option value='&#x2b;250'>&#x2b;250</option>
+              <option value='&#x2b;290'>&#x2b;290</option>
+              <option value='&#x2b;1869'>&#x2b;1869</option>
+              <option value='&#x2b;1758'>&#x2b;1758</option>
+              <option value='&#x2b;508'>&#x2b;508</option>
+              <option value='&#x2b;1784'>&#x2b;1784</option>
+              <option value='&#x2b;685'>&#x2b;685</option>
+              <option value='&#x2b;378'>&#x2b;378</option>
+              <option value='&#x2b;239'>&#x2b;239</option>
+              <option value='&#x2b;966'>&#x2b;966</option>
+              <option value='&#x2b;221'>&#x2b;221</option>
+              <option value='&#x2b;381'>&#x2b;381</option>
+              <option value='&#x2b;248'>&#x2b;248</option>
+              <option value='&#x2b;232'>&#x2b;232</option>
+              <option value='&#x2b;65'>&#x2b;65</option>
+              <option value='&#x2b;1721'>&#x2b;1721</option>
+              <option value='&#x2b;421'>&#x2b;421</option>
+              <option value='&#x2b;386'>&#x2b;386</option>
+              <option value='&#x2b;677'>&#x2b;677</option>
+              <option value='&#x2b;252'>&#x2b;252</option>
+              <option value='&#x2b;27'>&#x2b;27</option>
+              <option value='&#x2b;82'>&#x2b;82</option>
+              <option value='&#x2b;211'>&#x2b;211</option>
+              <option value='&#x2b;34'>&#x2b;34</option>
+              <option value='&#x2b;94'>&#x2b;94</option>
+              <option value='&#x2b;249'>&#x2b;249</option>
+              <option value='&#x2b;597'>&#x2b;597</option>
+              <option value='&#x2b;268'>&#x2b;268</option>
+              <option value='&#x2b;46'>&#x2b;46</option>
+              <option value='&#x2b;41'>&#x2b;41</option>
+              <option value='&#x2b;963'>&#x2b;963</option>
+              <option value='&#x2b;886'>&#x2b;886</option>
+              <option value='&#x2b;992'>&#x2b;992</option>
+              <option value='&#x2b;255'>&#x2b;255</option>
+              <option value='&#x2b;66'>&#x2b;66</option>
+              <option value='&#x2b;670'>&#x2b;670</option>
+              <option value='&#x2b;228'>&#x2b;228</option>
+              <option value='&#x2b;690'>&#x2b;690</option>
+              <option value='&#x2b;676'>&#x2b;676</option>
+              <option value='&#x2b;1868'>&#x2b;1868</option>
+              <option value='&#x2b;216'>&#x2b;216</option>
+              <option value='&#x2b;90'>&#x2b;90</option>
+              <option value='&#x2b;993'>&#x2b;993</option>
+              <option value='&#x2b;1649'>&#x2b;1649</option>
+              <option value='&#x2b;688'>&#x2b;688</option>
+              <option value='&#x2b;256'>&#x2b;256</option>
+              <option value='&#x2b;380'>&#x2b;380</option>
+              <option value='&#x2b;598'>&#x2b;598</option>
+              <option value='&#x2b;1340'>&#x2b;1340</option>
+              <option value='&#x2b;998'>&#x2b;998</option>
+              <option value='&#x2b;678'>&#x2b;678</option>
+              <option value='&#x2b;58'>&#x2b;58</option>
+              <option value='&#x2b;84'>&#x2b;84</option>
+              <option value='&#x2b;681'>&#x2b;681</option>
+              <option value='&#x2b;967'>&#x2b;967</option>
+              <option value='&#x2b;260'>&#x2b;260</option>
+              <option value='&#x2b;263'>&#x2b;263</option>
+          </select><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:15px; font-family: Verdana;'><label for='Phone'>Phone<span style='color:red;'>*</span></label></div><div class='zcwf_col_fld'><input type='text' id='Phone' name='Phone' maxlength='30'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:15px; font-family: Verdana;'><label for='Email'>Email</label></div><div class='zcwf_col_fld'><input type='text' ftype='email' autocomplete='false' id='Email' name='Email' crmlabel='' maxlength='100'></input><div class='zcwf_col_help'></div></div></div><div class='zcwf_row wfrm_fld_dpNn'><div class='zcwf_col_lab' style='font-size:15px; font-family: Verdana;'><label for='Lead_Source'>Lead Source</label></div><div class='zcwf_col_fld'><select class='zcwf_col_fld_slt' id='Lead_Source' name='Lead Source'  >
+              <option value='-None-'>-None-</option>
+              <option value='Advertisement'>Advertisement</option>
+          <option selected value='Come&#x20;on&#x20;Kerala&#x20;24&#x20;Merc'>Come on Kerala 24 Merc</option>
+              <option value='Come&#x20;on&#x20;Kerala&#x20;2024'>Come on Kerala 2024</option>
+              <option value='Landing&#x20;Page&#x20;-&#x20;Manorama&#x20;Max'>Landing Page - Manorama Max</option>
+              <option value='Landing&#x20;Page&#x20;-&#x20;Manorama&#x20;Max&#x20;05&#x20;May&#x20;2024'>Landing Page - Manorama Max 05 May 2024</option>
+              <option value='Cold&#x20;Call'>Cold Call</option>
+              <option value='IOS'>IOS</option>
+              <option value='Employee&#x20;Referral'>Employee Referral</option>
+              <option value='External&#x20;Referral'>External Referral</option>
+              <option value='Online&#x20;Store'>Online Store</option>
+              <option value='Partner'>Partner</option>
+              <option value='Public&#x20;Relations'>Public Relations</option>
+              <option value='Sales&#x20;Email&#x20;Alias'>Sales Email Alias</option>
+              <option value='Seminar&#x20;Partner'>Seminar Partner</option>
+              <option value='Internal&#x20;Seminar'>Internal Seminar</option>
+              <option value='Trade&#x20;Show'>Trade Show</option>
+              <option value='Android'>Android</option>
+              <option value='Web&#x20;Download'>Web Download</option>
+              <option value='Web&#x20;Research'>Web Research</option>
+              <option value='Chat'>Chat</option>
+              <option value='Twitter'>Twitter</option>
+              <option value='Facebook'>Facebook</option>
+              <option value='Google&#x2b;'>Google&#x2b;</option>
+              <option value='Customer&#x20;refer&#x20;or&#x20;external&#x20;refer'>Customer refer or external refer</option>
+              <option value='News&#x20;paper'>News paper</option>
+              <option value='TV&#x20;Channels'>TV Channels</option>
+              <option value='Online&#x20;Landing&#x20;Page'>Online Landing Page</option>
+              <option value='API'>API</option>
+              <option value='Campaign'>Campaign</option>
+              <option value='Chat&#x20;Application'>Chat Application</option>
+              <option value='Migration'>Migration</option>
+              <option value='Digital&#x20;Marketing'>Digital Marketing</option>
+              <option value='CRM&#x20;Referral&#x20;Lead'>CRM Referral Lead</option>
+              <option value='Abandoned&#x20;Calls'>Abandoned Calls</option>
+              <option value='Dynamic&#x20;Lead&#x20;Source'>Dynamic Lead Source</option>
+              <option value='A&#x20;lead&#x20;generated&#x20;from&#x20;Branch&#x20;registration'>A lead generated from Branch registration</option>
+              <option value='A&#x20;lead&#x20;generated&#x20;from&#x20;NIC&#x20;Registration'>A lead generated from NIC Registration</option>
+              <option value='Agent&#x20;Customer'>Agent Customer</option>
+              <option value='Agent&#x20;Registration&#x20;NRI'>Agent Registration NRI</option>
+              <option value='Agent&#x20;Registration&#x20;NRK'>Agent Registration NRK</option>
+              <option value='Agent&#x20;Registration-NIC'>Agent Registration-NIC</option>
+              <option value='Agent'>Agent</option>
+              <option value='AKCAF&#x20;Sep&#x20;2022'>AKCAF Sep 2022</option>
+              <option value='Asianet'>Asianet</option>
+              <option value='Bank&#x20;Registered'>Bank Registered</option>
+              <option value='Branch&#x20;NRK&#x20;Registered'>Branch NRK Registered</option>
+              <option value='Branch&#x20;Registration'>Branch Registration</option>
+              <option value='Campaign&#x20;via&#x20;abandoned&#x20;call'>Campaign via abandoned call</option>
+              <option value='Campaign&#x20;via&#x20;email&#x20;not&#x20;verified'>Campaign via email not verified</option>
+              <option value='Campaign&#x20;via&#x20;Missed&#x20;Call'>Campaign via Missed Call</option>
+              <option value='Campaign&#x20;via&#x20;NORKA&#x20;DB'>Campaign via NORKA DB</option>
+              <option value='Campaign&#x20;via&#x20;push'>Campaign via push</option>
+              <option value='Campaign&#x20;via&#x20;SMS&#x20;Short&#x20;Code'>Campaign via SMS Short Code</option>
+              <option value='Campaign&#x20;via&#x20;whatsapp'>Campaign via whatsapp</option>
+              <option value='Campaign&#x20;Via&#x20;WhatsAPP&#x20;Followup'>Campaign Via WhatsAPP Followup</option>
+              <option value='Campign&#x20;via&#x20;email'>Campign via email</option>
+              <option value='Campign&#x20;via&#x20;Manual&#x20;Call'>Campign via Manual Call</option>
+              <option value='Campign&#x20;via&#x20;sms'>Campign via sms</option>
+              <option value='Chat&#x20;application&#x20;from&#x20;emailchat'>Chat application from emailchat</option>
+              <option value='Chat&#x20;application&#x20;from&#x20;Facebookchat'>Chat application from Facebookchat</option>
+              <option value='Chat&#x20;application&#x20;from&#x20;Mobile'>Chat application from Mobile</option>
+              <option value='Chat&#x20;application&#x20;from&#x20;NIC'>Chat application from NIC</option>
+              <option value='Chat&#x20;application&#x20;from&#x20;Whatsappchat'>Chat application from Whatsappchat</option>
+              <option value='Chat&#x20;from&#x20;Pravasi&#x20;Home&#x20;Page'>Chat from Pravasi Home Page</option>
+              <option value='Come&#x20;on&#x20;Kerala'>Come on Kerala</option>
+              <option value='CRM&#x20;Call&#x20;Centre&#x20;automated&#x20;process'>CRM Call Centre automated process</option>
+              <option value='CRM&#x20;Callcenter'>CRM Callcenter</option>
+              <option value='CRM&#x20;Common&#x20;Leads'>CRM Common Leads</option>
+              <option value='DD&#x20;National'>DD National</option>
+              <option value='DDFS'>DDFS</option>
+              <option value='Digital-Facebook'>Digital-Facebook</option>
+              <option value='Email'>Email</option>
+              <option value='Exhibition'>Exhibition</option>
+              <option value='SOCIAL&#x20;MEDIA'>SOCIAL MEDIA</option>
+              <option value='ONLINE'>ONLINE</option>
+              <option value='LANDING&#x20;PAGE'>LANDING PAGE</option>
+              <option value='CAMPAINGN'>CAMPAINGN</option>
+              <option value='CHAT&#x20;APPLICATIONS'>CHAT APPLICATIONS</option>
+              <option value='MIGRATON'>MIGRATON</option>
+              <option value='CRM&#x20;REFFERAL&#x20;LEADS'>CRM REFFERAL LEADS</option>
+              <option value='DYNAMIC&#x20;LEQAD&#x20;SOURCES'>DYNAMIC LEQAD SOURCES</option>
+              <option value='COMEON&#x20;KERALA'>COMEON KERALA</option>
+              <option value='A&#x20;LEAD&#x20;GENERATED&#x20;FROM&#x20;NIC&#x20;REGISTRTION'>A LEAD GENERATED FROM NIC REGISTRTION</option>
+              <option value='AGENT&#x20;REGISTRATION&#x20;NIC'>AGENT REGISTRATION NIC</option>
+              <option value='BANK&#x20;REGISTRED'>BANK REGISTRED</option>
+              <option value='BOOST&#x20;FB&#x20;POST'>BOOST FB POST</option>
+              <option value='BRANCH&#x20;NRK&#x20;REGISTRATED'>BRANCH NRK REGISTRATED</option>
+              <option value='COMPAINGN&#x20;VIA&#x20;ABANDONED&#x20;CALL'>COMPAINGN VIA ABANDONED CALL</option>
+              <option value='COMPAINGN&#x20;VIA&#x20;EMAIL&#x20;NOT&#x20;VERIFIED'>COMPAINGN VIA EMAIL NOT VERIFIED</option>
+              <option value='COMPAINGN&#x20;VIA&#x20;MISSED&#x20;CALL'>COMPAINGN VIA MISSED CALL</option>
+              <option value='CAMPAINGN&#x20;VIA&#x20;NORKA&#x20;DB'>CAMPAINGN VIA NORKA DB</option>
+              <option value='CAMPAIGN&#x20;NORKA&#x20;DB'>CAMPAIGN NORKA DB</option>
+              <option value='CAMPAIGN&#x20;VIA&#x20;WHATSAPP&#x20;FOLLOUP'>CAMPAIGN VIA WHATSAPP FOLLOUP</option>
+              <option value='CAMPAIGN&#x20;VIA&#x20;EMAIL'>CAMPAIGN VIA EMAIL</option>
+              <option value='CAMPAIGN&#x20;VIA&#x20;MANUAL&#x20;CALL'>CAMPAIGN VIA MANUAL CALL</option>
+              <option value='CAMPAIGN&#x20;VIA&#x20;SMS'>CAMPAIGN VIA SMS</option>
+              <option value='CHAT&#x20;APPLICATIONS&#x20;FOR&#x20;MOBILE&#x20;API'>CHAT APPLICATIONS FOR MOBILE API</option>
+              <option value='CHAT&#x20;APPLICATIONS&#x20;FROM&#x20;EMAILCHAT'>CHAT APPLICATIONS FROM EMAILCHAT</option>
+              <option value='CHAT&#x20;APPLICATIONS&#x20;FROM&#x20;FACEBOOK&#x20;CHAT'>CHAT APPLICATIONS FROM FACEBOOK CHAT</option>
+              <option value='CHAT&#x20;APPLICATIONS&#x20;FROM&#x20;MOBILE'>CHAT APPLICATIONS FROM MOBILE</option>
+              <option value='CHAT&#x20;APPLICATIONS&#x20;FROM&#x20;NIC'>CHAT APPLICATIONS FROM NIC</option>
+              <option value='CHAT&#x20;APPLICATIONS&#x20;FROM&#x20;WHATSAPP&#x20;CHAT'>CHAT APPLICATIONS FROM WHATSAPP CHAT</option>
+              <option value='CHAT&#x20;FROM&#x20;PRAVASY&#x20;HOME&#x20;PAGE'>CHAT FROM PRAVASY HOME PAGE</option>
+              <option value='COMON&#x20;KERALA'>COMON KERALA</option>
+              <option value='CRM&#x20;CALLCENTRE'>CRM CALLCENTRE</option>
+              <option value='DIGITAL&#x20;FACEBOOK'>DIGITAL FACEBOOK</option>
+              <option value='FACEBOOK&#x20;EUROPE'>FACEBOOK EUROPE</option>
+              <option value='FB&#x20;CAMPAIGN&#x20;LANDINDING&#x20;PAGE'>FB CAMPAIGN LANDINDING PAGE</option>
+              <option value='GOOGLE&#x20;ADS'>GOOGLE ADS</option>
+              <option value='GOOGLEADS&#x20;EUROPE'>GOOGLEADS EUROPE</option>
+              <option value='GOOGLE&#x20;ADWORDS'>GOOGLE ADWORDS</option>
+              <option value='GOOGLE&#x20;ADWORDS&#x20;CEARSLEG'>GOOGLE ADWORDS CEARSLEG</option>
+              <option value='IOS&#x20;REGISTERED'>IOS REGISTERED</option>
+              <option value='IVR&#x20;ABRAOAD'>IVR ABRAOAD</option>
+              <option value='IVR&#x20;CALLBACK&#x20;UAE'>IVR CALLBACK UAE</option>
+              <option value='KIIFB&#x20;500CR&#x20;BONDS'>KIIFB 500CR BONDS</option>
+              <option value='KIIFB&#x20;FB&#x20;CAMPAIGN'>KIIFB FB CAMPAIGN</option>
+              <option value='KIIFB&#x20;LEADS'>KIIFB LEADS</option>
+              <option value='KIIFB&#x20;-24&#x20;NEWS'>KIIFB -24 NEWS</option>
+              <option value='KIIFB-ASIANET'>KIIFB-ASIANET</option>
+              <option value='KIIFB&#x20;DAILY&#x20;HUNT'>KIIFB DAILY HUNT</option>
+              <option value='KIIFB&#x20;FACEBOOK'>KIIFB FACEBOOK</option>
+              <option value='KIIFB&#x20;2023'>KIIFB 2023</option>
+              <option value='LANDING&#x20;PAGE&#x20;1-FACEBOOK'>LANDING PAGE 1-FACEBOOK</option>
+              <option value='LANDING&#x20;PAGE&#x20;10-&#x20;UAE&#x20;CAMPAIGN'>LANDING PAGE 10- UAE CAMPAIGN</option>
+              <option value='LANDING&#x20;PAGE&#x20;11-&#x20;MALABAR&#x20;ADUKALA'>LANDING PAGE 11- MALABAR ADUKALA</option>
+              <option value='LANDING&#x20;PAGE12-&#x20;TWITTER'>LANDING PAGE12- TWITTER</option>
+              <option value='LANDING&#x20;PAGE&#x20;13-&#x20;HIT&#x20;FM&#x20;FACEBOOK'>LANDING PAGE 13- HIT FM FACEBOOK</option>
+              <option value='LANDING&#x20;PAGE&#x20;14-GOLF&#x20;FM&#x20;FACEBOOK'>LANDING PAGE 14-GOLF FM FACEBOOK</option>
+              <option value='LANDING&#x20;PAGE&#x20;15-&#x20;DAILY&#x20;HUNT&#x20;UAE'>LANDING PAGE 15- DAILY HUNT UAE</option>
+              <option value='LANDING&#x20;PAGE&#x20;16-&#x20;DAILY&#x20;HUNT&#x20;-OMAN'>LANDING PAGE 16- DAILY HUNT -OMAN</option>
+              <option value='LANDING&#x20;PAGE&#x20;17&#x20;-&#x20;DAILY&#x20;HUNT&#x20;KSA'>LANDING PAGE 17 - DAILY HUNT KSA</option>
+              <option value='LANDING&#x20;PAGE&#x20;18-&#x20;DAILY&#x20;HUNT&#x20;BAHARIN'>LANDING PAGE 18- DAILY HUNT BAHARIN</option>
+              <option value='LANDING&#x20;PAGE&#x20;19-&#x20;DAILY&#x20;HUNT&#x20;QATAR'>LANDING PAGE 19- DAILY HUNT QATAR</option>
+              <option value='LANDING&#x20;PAGE&#x20;2-&#x20;MANORAMA'>LANDING PAGE 2- MANORAMA</option>
+              <option value='LANDING&#x20;PAGE&#x20;20-&#x20;DAILYHUNT-KUWAIT'>LANDING PAGE 20- DAILYHUNT-KUWAIT</option>
+              <option value='LANDING&#x20;PAGE&#x20;21&#x20;-ASIANET&#x20;-EUROPE'>LANDING PAGE 21 -ASIANET -EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;22-&#x20;ASIANET&#x20;NEWS&#x20;FB&#x20;PAGE&#x20;EUROPE'>LANDING PAGE 22- ASIANET NEWS FB PAGE EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;23&#x20;-&#x20;MANORAMA&#x20;ONLINE&#x20;EUROPE'>LANDING PAGE 23 - MANORAMA ONLINE EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;24-&#x20;MAZHAVIL&#x20;MONARAM.COM-EUROPE'>LANDING PAGE 24- MAZHAVIL MONARAM.COM-EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;25-VANITHA&#x20;INTERNATIONAL&#x20;-EUROPE'>LANDING PAGE 25-VANITHA INTERNATIONAL -EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;26-&#x20;VANITHA&#x20;I&#x20;PAD&#x20;VERSION&#x20;EUROPR'>LANDING PAGE 26- VANITHA I PAD VERSION EUROPR</option>
+              <option value='LANDING&#x20;PAGE&#x20;27-&#x20;MATHURBHUMI&#x20;ONLINE&#x20;-&#x20;EUROPE'>LANDING PAGE 27- MATHURBHUMI ONLINE - EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;28-&#x20;MATHURBUMI&#x20;CHANNEL&#x20;-EUROPE'>LANDING PAGE 28- MATHURBUMI CHANNEL -EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;29-&#x20;MATHURBUMI&#x20;NEWS&#x20;-EUROPE'>LANDING PAGE 29- MATHURBUMI NEWS -EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;3-&#x20;MATHURBUMI'>LANDING PAGE 3- MATHURBUMI</option>
+              <option value='LANDING&#x20;PAGE&#x20;30&#x20;-&#x20;JANAM&#x20;TV&#x20;DIGITAL&#x20;EUROPE'>LANDING PAGE 30 - JANAM TV DIGITAL EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;31-&#x20;FLOWERS&#x20;TV&#x20;FB&#x20;PAGE&#x20;EUROPE'>LANDING PAGE 31- FLOWERS TV FB PAGE EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;32-&#x20;FLOWERS&#x20;TV&#x20;EUROPE'>LANDING PAGE 32- FLOWERS TV EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;33-&#x20;MEDIA&#x20;ONE&#x20;TV&#x20;DIGITAL&#x20;EUROPE'>LANDING PAGE 33- MEDIA ONE TV DIGITAL EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;34-MEDIA&#x20;ONE&#x20;TV&#x20;EUROPE'>LANDING PAGE 34-MEDIA ONE TV EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;35-UK&#x20;MALAYALAM&#x20;NEWS&#x20;.COM&#x20;EUROPE'>LANDING PAGE 35-UK MALAYALAM NEWS .COM EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;36-&#x20;METRO&#x20;MALAYALAM&#x20;UK&#x20;TV&#x20;EUROPE'>LANDING PAGE 36- METRO MALAYALAM UK TV EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;37-MALAYALAM&#x20;UK&#x20;EUROPE'>LANDING PAGE 37-MALAYALAM UK EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;38-&#x20;MALAYALI.CO.UK&#x20;EUROPE'>LANDING PAGE 38- MALAYALI.CO.UK EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;39-&#x20;AMRITHA&#x20;TV&#x20;EUROPE'>LANDING PAGE 39- AMRITHA TV EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;4-&#x20;DEEPIKA'>LANDING PAGE 4- DEEPIKA</option>
+              <option value='LANDING&#x20;PAGE40-KERALA&#x20;KOUMUDI&#x20;EUROPE'>LANDING PAGE40-KERALA KOUMUDI EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;41-&#x20;UK&#x20;MALAYALI&#x20;NU&#x20;EUROPE'>LANDING PAGE 41- UK MALAYALI NU EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;42-DAILYHUNT&#x20;EUROPE'>LANDING PAGE 42-DAILYHUNT EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;43-UK&#x20;MALAYALIEE&#x20;EUROPE'>LANDING PAGE 43-UK MALAYALIEE EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;44-&#x20;NERARIYAN&#x20;EUROPE'>LANDING PAGE 44- NERARIYAN EUROPE</option>
+              <option value='LANDING&#x20;PAGE&#x20;5-&#x20;MADHYAMAM'>LANDING PAGE 5- MADHYAMAM</option>
+              <option value='LANDING&#x20;PAGE&#x20;6-&#x20;MARUNADAN&#x20;MALAYALAI'>LANDING PAGE 6- MARUNADAN MALAYALAI</option>
+              <option value='LANDING&#x20;PAGE&#x20;7-&#x20;WHATSAPP'>LANDING PAGE 7- WHATSAPP</option>
+              <option value='LANDING&#x20;PAGE&#x20;8-&#x20;GOOGLE&#x20;ADD&#x20;WORDS'>LANDING PAGE 8- GOOGLE ADD WORDS</option>
+              <option value='LANDING&#x20;PAGE&#x20;9-&#x20;PSC&#x20;WEBSITE'>LANDING PAGE 9- PSC WEBSITE</option>
+              <option value='LEAD&#x20;FROM&#x20;BANK&#x20;REGISTRATION'>LEAD FROM BANK REGISTRATION</option>
+              <option value='LEAD&#x20;BRANCH&#x20;NRK&#x20;REGISTRATIONS'>LEAD BRANCH NRK REGISTRATIONS</option>
+              <option value='LEAD&#x20;FROM&#x20;KSFE&#x20;BRANCH'>LEAD FROM KSFE BRANCH</option>
+              <option value='LEAD&#x20;FROM&#x20;MOBILE&#x20;NRK&#x20;REGISTRATION'>LEAD FROM MOBILE NRK REGISTRATION</option>
+              <option value='LEAD&#x20;GENERATED&#x20;FROM&#x20;MOBILE&#x20;REGISTRATION'>LEAD GENERATED FROM MOBILE REGISTRATION</option>
+              <option value='MAKE&#x20;IN&#x20;KERALA'>MAKE IN KERALA</option>
+              <option value='MALAYALA&#x20;MANORAMA'>MALAYALA MANORAMA</option>
+              <option value='MANTHRA&#x20;FB&#x20;LEADS&#x20;IMPORTED'>MANTHRA FB LEADS IMPORTED</option>
+              <option value='MANTHRA&#x20;FROM&#x20;OCTOBER&#x20;2022'>MANTHRA FROM OCTOBER 2022</option>
+              <option value='MARK&#x20;MANORAMA&#x20;ONLINE'>MARK MANORAMA ONLINE</option>
+              <option value='MARKETING&#x20;LEADS'>MARKETING LEADS</option>
+              <option value='MISSED&#x20;CALL'>MISSED CALL</option>
+              <option value='MOBILE&#x20;APP'>MOBILE APP</option>
+              <option value='MOBILE&#x20;NRK&#x20;REGISTRED'>MOBILE NRK REGISTRED</option>
+              <option value='MOBILE&#x20;REGISTRATION&#x20;NIC'>MOBILE REGISTRATION NIC</option>
+              <option value='NEW&#x20;INDIAN&#x20;EXPRESS'>NEW INDIAN EXPRESS</option>
+              <option value='NIC'>NIC</option>
+              <option value='NIC&#x20;NRK&#x20;REGISTRED'>NIC NRK REGISTRED</option>
+              <option value='NIC&#x20;REGISTRATION'>NIC REGISTRATION</option>
+              <option value='NORKA&#x20;MOBILE&#x20;APP'>NORKA MOBILE APP</option>
+              <option value='NORKA&#x20;WEB'>NORKA WEB</option>
+              <option value='OLD&#x20;SERVER&#x20;MIGRATION'>OLD SERVER MIGRATION</option>
+              <option value='OUTBOUND&#x20;CALL'>OUTBOUND CALL</option>
+              <option value='Picky&#x20;Assist'>Picky Assist</option>
+              <option value='POS&#x20;MACHINE'>POS MACHINE</option>
+              <option value='POS&#x20;MACHINE&#x20;ANNOUNCED&#x20;CHIT'>POS MACHINE ANNOUNCED CHIT</option>
+              <option value='PRAVASI&#x20;BANDU'>PRAVASI BANDU</option>
+              <option value='PRAVASI&#x20;HOME&#x20;PAGE'>PRAVASI HOME PAGE</option>
+              <option value='PRAVASI&#x20;REFEREANCE&#x20;FORM'>PRAVASI REFEREANCE FORM</option>
+              <option value='PRAVASI&#x20;WELLFARE&#x20;BOARD'>PRAVASI WELLFARE BOARD</option>
+              <option value='PRE-REGISTRATION'>PRE-REGISTRATION</option>
+              <option value='REFER&#x20;A&#x20;FRIEND'>REFER A FRIEND</option>
+              <option value='REFREANCE'>REFREANCE</option>
+              <option value='REGISTERED&#x20;ONLY&#x20;IN&#x20;NORKA'>REGISTERED ONLY IN NORKA</option>
+              <option value='SMS&#x20;SHORT&#x20;CODE'>SMS SHORT CODE</option>
+              <option value='SURYA'>SURYA</option>
+              <option value='TIK&#x20;TOK&#x20;MANTHRA'>TIK TOK MANTHRA</option>
+              <option value='TIMES&#x20;OF&#x20;INDIA'>TIMES OF INDIA</option>
+              <option value='UNATTENDED&#x20;SOURCES'>UNATTENDED SOURCES</option>
+              <option value='URL'>URL</option>
+              <option value='VIA&#x20;AUTO&#x20;CALL'>VIA AUTO CALL</option>
+              <option value='WEB&#x20;SITE'>WEB SITE</option>
+              <option value='WHATSAPP'>WHATSAPP</option>
+              <option value='Core'>Core</option>
+          </select><div class='zcwf_col_help'></div></div></div><div class='zcwf_row'><div class='zcwf_col_lab'></div><div class='zcwf_col_fld'><input type='submit' id='formsubmit' class='formsubmit zcwf_button' value='Submit' title='Submit'><input type='reset' class='zcwf_button' name='reset' value='Reset' title='Reset'></div></div>
+      <script>
+      function validateEmail456473000051337275()
+      {
+          var form = document.forms['WebToLeads456473000051337275'];
+          var emailFld = form.querySelectorAll('[ftype=email]');
+          var i;
+          for (i = 0; i < emailFld.length; i++)
+          {
+              var emailVal = emailFld[i].value;
+              if((emailVal.replace(/^\s+|\s+$/g, '')).length!=0 )
+              {
+                  var atpos=emailVal.indexOf('@');
+                  var dotpos=emailVal.lastIndexOf('.');
+                  if (atpos<1 || dotpos<atpos+2 || dotpos+2>=emailVal.length)
+                  {
+                      alert('Please enter a valid email address. ');
+                      emailFld[i].focus();
+                      return false;
+                  }
+              }
+          }
+          return true;
       }
-      
-      
-    </script>
-</body>
+  
+      function checkMandatory456473000051337275() {
+          var mndFileds = new Array('Last Name','Phone');
+          var fldLangVal = new Array('Name','Phone');
+          for(i=0;i<mndFileds.length;i++) {
+            var fieldObj=document.forms['WebToLeads456473000051337275'][mndFileds[i]];
+            if(fieldObj) {
+              if (((fieldObj.value).replace(/^\s+|\s+$/g, '')).length==0) {
+               if(fieldObj.type =='file')
+                  { 
+                   alert('Please select a file to upload.'); 
+                   fieldObj.focus(); 
+                   return false;
+                  } 
+              alert(fldLangVal[i] +' cannot be empty.'); 
+                        fieldObj.focus();
+                        return false;
+              }  else if(fieldObj.nodeName=='SELECT') {
+                       if(fieldObj.options[fieldObj.selectedIndex].value=='-None-') {
+                  alert(fldLangVal[i] +' cannot be none.'); 
+                  fieldObj.focus();
+                  return false;
+                 }
+              } else if(fieldObj.type =='checkbox'){
+                  if(fieldObj.checked == false){
+                  alert('Please accept  '+fldLangVal[i]);
+                  fieldObj.focus();
+                  return false;
+                 } 
+               } 
+               try {
+                   if(fieldObj.name == 'Last Name') {
+                  name = fieldObj.value;
+                     }
+              } catch (e) {}
+              }
+          }
+          if(!validateEmail456473000051337275()){return false;}
+          
+      var urlparams = new URLSearchParams( window.location.search);
+      if(urlparams.has('service') && (urlparams.get('service')==='smarturl')){
+          var webform = document.getElementById('webform456473000051337275');
+           var service =  urlparams.get('service'); 
+          var smarturlfield = document.createElement('input');
+          smarturlfield.setAttribute('type','hidden');
+          smarturlfield.setAttribute('value',service);
+          smarturlfield.setAttribute('name','service');
+          webform.appendChild(smarturlfield); 
+      }
+  
+          document.querySelector('.crmWebToEntityForm .formsubmit').setAttribute('disabled', true);
+      }
+  
+  function tooltipShow456473000051337275(el){
+      var tooltip = el.nextElementSibling;
+      var tooltipDisplay = tooltip.style.display;
+      if(tooltipDisplay == 'none'){
+          var allTooltip = document.getElementsByClassName('zcwf_tooltip_over');
+          for(i=0; i<allTooltip.length; i++){
+              allTooltip[i].style.display='none';
+          }
+          tooltip.style.display = 'block';
+      }else{
+          tooltip.style.display='none';
+      }
+  }
+  </script>
+      <!-- Do not remove this --- Analytics Tracking code starts --><script id='wf_anal' src='https://crm.zohopublic.in/crm/WebFormAnalyticsServeServlet?rid=e5d6ad2ed46d3d624c36142dfe26de3a70aee9616e93863998c42a43f49f88c5958ad1d5141d0e31ff8e85e1083eb359gid34e5d02a4ba2cddae07d994717ec1bb1b6c43da2a510fb4b408011c968d59569gidbd929da4f80b7d512ed7122d986166991e3df105d0cf67af079c848e0e56e6a8gid9f93202b3cda2ac45a1f9dacb536d34643784729fc663a27986dc5eb609ee468&tw=ad472db724dc4d6aa0bdb3eac28196657687ea91a6e6466758f39d7a07dbc2ff'></script><!-- Do not remove this --- Analytics Tracking code ends. --></form>
+  </div>
 </html>
